@@ -1,0 +1,30 @@
+.bg{
+    background-image: url(https://i.imgur.com/xzdUbxJ.jpg);
+}
+.txt{
+    font-family: monospace;
+    font-weight: normal; 
+    font-size: 16px;
+    font-style: normal;
+}
+
+.fs-1{
+    color: black;
+    font-family: monospace;
+    font-size: 50px;
+}
+
+.fs-2{
+    color: gray;
+    font-family: monospace;
+    font-size: 20px;
+}
+
+
+.mrg{
+    margin-right: 10px;
+}
+
+.mrg-1{
+    margin-left: -65px;
+}

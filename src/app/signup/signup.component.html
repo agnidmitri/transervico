@@ -1,0 +1,67 @@
+<div class="container-fluid" id="img-bg">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-6 mt-3">
+            <div class="row d-flex justify-content-center">
+
+
+                <div class="col-md-10">
+                    <div class="form-bg">
+                        <h1 class="text-center mt-3">Cadastro</h1>
+                        <div class="form-group">
+                            <div class="form-group">
+                                <label for="name">Nome</label>
+                                <input [(ngModel)]='user.nome' class="form-control mb-2" type="text" id="name"
+                                    placeholder="Nome">
+                            </div>
+
+                            <label for="user">Usuário</label>
+                            <input [(ngModel)]='user.usuario' class="form-control mb-2" type="text" id="user"
+                                placeholder="Nome de usuário">
+
+                            <div class="form-group form">
+                                <label for="pic">Foto</label>
+                                <input [(ngModel)]='user.foto' class="form-control mb-2" type="url" id="pic"
+                                    placeholder="Link para sua foto">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <label for="pass">Senha</label>
+                                <input (input)='confirmPass($event)' class="form-control" type="password" id="pass"
+                                    placeholder="Sua senha">
+                            </div>
+                            <div class="col">
+                                <label for="confirmPass">Confirmar Senha</label>
+                                <i class="ml fa fa-eye-slash" aria-hidden="true"></i>
+                                <input [(ngModel)]='user.senha' class="form-control" type="password" name="passconf"
+                                    id="passconf" placeholder="Confirme sua senha">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="userType">Tipo de usuário</label>
+                            <select class="form-control mb-4" id="userType" (change)='tipoUser($event)'>
+                                <option>Selecione o tipo de usuário:</option>
+                                <option value="common">Comum</option>
+                                <option value="adm">Admin</option>
+                            </select>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <button type="submit" class="btn btn-outline-dark" (click)='cadastrar()'>Cadastrar</button>
+                        </div>
+                        <hr class="mt-4 mb-3">
+                        <p class="text-center">Já tem uma conta?
+                        </p>
+                        <div class="d-flex justify-content-center">
+                            <button type="button" class="btn btn-outline-dark" routerLink='/login'>Entrar</button>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>

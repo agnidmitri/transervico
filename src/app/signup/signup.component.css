@@ -1,0 +1,19 @@
+#img-bg{
+    background-image: url('https://i.imgur.com/NvUq5U6.jpg');
+    min-height: 695px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% ;
+}
+.form-bg{
+    background-color: #f2f7f270;
+    padding: 40px;
+    border-radius: 4%;
+    box-shadow: 4px 6px 3px 0px #0000003a;
+    width: 500px;
+  }
+
+  .ml{
+    margin-left: 58px;
+  }
+

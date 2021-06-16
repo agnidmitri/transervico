@@ -1,0 +1,101 @@
+<div class="container">
+
+  <div class="row d-flex align-items-center">
+    <div class="col-md-8">
+
+      <div class="row d-flex">
+        <div class="col-md-8">
+          <h1 class="fs-1">Seja bem vinde ao TransServiços!</h1>
+          <p class="fs-2">Este é um espaço para divulgar seu trampo e/ou encontrar pessoas trans oferecendo serviços
+            diversos!</p>
+        </div>
+      </div>
+
+      <div class="row d-flex">
+        <div class="col-md-8">
+          <button class="btn btn-outline-dark mrg" data-toggle="modal" data-target="#novaPostagem">Nova
+            Postagem</button>
+          <a class="btn btn-outline-dark" href="#postagens">Ver Postagens</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-4 d-flex justify-content-center mrg-1">
+      <img src="https://i.imgur.com/8ZDdjg7.gif" alt="" width="600px" height="600px">
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="postagens">
+
+  <nav>
+    <div class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
+
+      <a class="nav-item nav-link active text-dark" id="nav-myPosts-tab" data-toggle="tab" href="#myPosts" role="tab"
+        aria-controls="nav-myPosts" aria-selected="true">Meus posts</a>
+
+      <a class="nav-item nav-link text-dark" id="nav-allPosts-tab" data-toggle="tab" href="#allPosts" role="tab"
+        aria-controls="nav-allPosts" aria-selected="false">Todos os posts</a>
+
+      <a class="nav-item nav-link text-dark" id="nav-byTheme-tab" data-toggle="tab" href="#byTheme" role="tab"
+        aria-controls="nav-byTheme" aria-selected="false">Posts por categoria</a>
+
+    </div>
+  </nav>
+
+  <div class="tab-content" id="nav-tabContent">
+
+    <div class="tab-pane fade show active" id="myPosts" role="tabpanel" aria-labelledby="nav-myPosts-tab">Meus posts
+    </div>
+
+    <div class="tab-pane fade" id="allPosts" role="tabpanel" aria-labelledby="nav-allPosts-tab">Todos os posts</div>
+
+    <div class="tab-pane fade" id="byTheme" role="tabpanel" aria-labelledby="nav-byTheme-tab">Posts por categoria</div>
+
+  </div>
+
+</div>
+
+<!-- modal -->
+<div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="TituloModalCentralizado">Nova Postagem</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <div class="form-goup">
+          <label for="titulo">Título</label>
+          <input [(ngModel)]='post.titulo' type="text" class="form-control" id="titulo" placeholder="Título">
+        </div>
+
+        <div class="form-goup">
+          <label for="titulo">Texto</label>
+          <textarea [(ngModel)]='post.texto' class="form-control" name="texto" id="texto" rows="3"></textarea>
+        </div>
+
+        <div class="form-goup">
+          <label for="titulo">Escolha um tema ou <a routerLink='/tema' data-dismiss="modal">crie um novo</a>: </label>
+          <select name="tema" id="tema" class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
+            <option *ngFor='let item of listaTemas' value="{{item.id}}">{{item.descricao}}
+
+            </option>
+          </select>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-outline-success" (click)='publicar()' data-dismiss="modal"
+          >Publicar</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+.menu {
+    font-family: monospace;
+    font-weight: normal; 
+    font-size: 16px;
+    font-style: normal;
+    background-color: #9A9AD0;
+}
+
+.pic-1{
+    margin-left: 10px;
+}
+.pic:hover{
+    width: 60px;
+    height: 60px;
+}
+
+.fa{
+    font-size:16px;
+    color: white;
+}
+
+.fa-pen:hover{
+    color: black;
+    font-size: 20px;
+}
+
+.fa-out:hover{
+    color: black;
+    font-size: 20px;
+}
+

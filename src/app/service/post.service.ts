@@ -16,10 +16,10 @@ export class PostService {
   }
 
   getAllPost(): Observable<Post[]>{
-    return this.http.get<Post[]>(`${environment.server}/postagem`, this.token)
+    return this.http.get<Post[]>(`${environment.server}/postagens`, this.token)
   }
 
   postPost(post: Post): Observable<Post>{
-    return this.http.post<Post>(`${environment.server}/postagem`, post, this.token)
+    return this.http.post<Post>(`${environment.server}/postagens`, post, this.token)
   }
 }

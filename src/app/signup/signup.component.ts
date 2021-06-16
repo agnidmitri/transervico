@@ -41,7 +41,7 @@ export class SignupComponent implements OnInit {
     } else {
       this.authService.cadastrar(this.user).subscribe((resp: User) => {
         this.user = resp
-        this.router.navigate(['/login'])
+        this.router.navigate(['/logar'])
         alert('Cadastro realizado com sucesso!')
       })
     }

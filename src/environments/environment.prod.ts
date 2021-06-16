@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  server: 'https://blogpessoalagni.herokuapp.com',
+  server: 'https://transervico.herokuapp.com',
   token:'',
   nome: '',
   id: 0,
